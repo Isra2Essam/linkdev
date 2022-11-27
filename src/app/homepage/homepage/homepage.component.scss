@@ -1,0 +1,213 @@
+$gray-color: #5E6282;
+$orange-color: #ff7c16;
+$pink-color: #F215B6;
+$blue-color: #181E4B;
+$red-color: #e72228;
+$white-color: #FFF;
+$green-color: #A6E51C;
+
+@mixin circle($dimentions) {
+  border-radius: 50%;
+  width: $dimentions;
+  height: $dimentions;
+}
+
+
+nav{
+  display: flex;
+  justify-content: center;
+}
+.banner-aside {
+  & h6,
+  & h1{
+    font-weight: 700;
+    letter-spacing: -0.68px;
+  }
+  & h6{
+    padding-top: 4rem;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+  & h1{
+    color: $blue-color;
+    font-size: 2.9rem;
+  }
+  & p{
+    font-size: 13px;
+    line-height: 25px;
+    word-spacing: 2px;
+    font-weight: 500;
+    color: $gray-color;
+  }
+  & .btn{
+    background-color: $orange-color;
+    width: 35%;
+    border-radius: 5px;
+    color: $white-color;
+    padding: 10px;
+  }
+  & .play-btn{
+    padding: 6px;
+    background: $red-color;
+    width: 38px;
+    height: 38px;
+    color: $white-color;
+    text-align: center;
+    border-radius: 50%;
+  }
+  & .play-btn + span{
+    color: $gray-color;
+  }
+  & ul.circles{
+    list-style: none;
+    column-gap: 11px;
+  }
+  & ul.circles li{
+    display: inline-block;
+  }
+  & ul.circles em{
+    font-size: 3px;
+    color: #353535
+  }
+  & .pink-circle,
+  & .green-circle,
+  & .orange-circle{
+    @include circle(26px);
+  }
+  & .pink-circle {
+    background-color: $pink-color;
+  }
+  & .green-circle {
+    background-color: $green-color;
+  }
+  & .orange-circle {
+    background-color: $orange-color;
+  }
+}
+.animated-img{
+
+}
+.animated-img {
+
+
+  // margin:-60px 0 0 -60px;
+  // -webkit-animation:spin 6s linear infinite;
+  // -moz-animation:spin 6s linear infinite;
+  // animation:spin 6s linear infinite;
+}
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform:rotate(360deg);
+  }
+}
+
+.things-we-do{
+  background-image: url(../../../assets/images/things.png);
+  background-size: cover;
+  height: 788px;
+  width: 100%;
+}
+.thing_we_do {
+  background-image: url(./../../../assets/images/things.png);
+  background-size: cover;
+  width: 100%;
+  .info {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+          color: #253776;
+          font-weight: bold;
+          text-align: right;
+          font-size: 3.5em;
+      }
+      p {
+          color: #FFFFFF;
+          font-size: 1.2em;
+          font-weight: 400;
+          padding: 0.5em;
+          text-align: right;
+      }
+  }
+  .reshape {
+      flex-direction: row-reverse;
+      height: 100%;
+      .flex-end {
+          display: flex;
+          align-items: flex-end;
+          padding: 0;
+          width: 15em;
+      }
+      .flex-start {
+          display: flex;
+          align-items: flex-start;
+          padding: 0;
+          width: 15em;
+      }
+      .upperPos {
+          position: relative;
+          bottom: 12%;
+      }
+      .centerPos {
+          position: relative;
+          top: 12%;
+      }
+      @media (max-width:768px) {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          .flex-end,
+          .flex-start {
+              padding: 0.5em;
+              width: auto
+          }
+          .upperPos {
+              bottom: 0;
+          }
+          .centerPos {
+              top: 0;
+          }
+      }
+  }
+  .card {
+      width: 15em;
+      height: 15em;
+      border: 0;
+      border-radius: 0;
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      .card-img-overlay {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .card-title {
+              font-weight: bold;
+              color: #FFFFFF;
+          }
+          .read_more {
+              visibility: hidden;
+              color: #fff;
+              font-size: 0.8em;
+              text-decoration: none;
+          }
+          &:hover {
+              background-color: #192653a1;
+              transition: background-color 0.5s linear;
+              .read_more {
+                  visibility: visible;
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+// @font-face {
+//   font-family: popping-font;
+//   src: url(./assets/fonts/Poppins-Bold.woff);
+// }
+// @font-face {
+//   font-family: popping-font-regular;
+//   src: url(./assets/fonts/Poppins-Regular.woff);
+// }
+// @font-face {
+//   font-family: popping-font-light;
+//   src: url(./assets/fonts/Poppins-Light.woff);
+// }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
