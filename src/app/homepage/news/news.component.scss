@@ -1,0 +1,56 @@
+.news-content{
+  & .btn{
+    background-color: #D9D9D9;
+    border: 0;
+    padding-inline: 15px;
+    padding-block: 10px;
+    color: #253776;
+  }
+  & .btn.active{
+    background-color: #13BEFF;
+    color: white;
+  }
+  & h1{
+    font-weight: 700;
+  }
+  .card{
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  }
+  .card-text{
+    color: #5E6282;
+    font-weight: 700;
+    height: 6rem;
+  }
+  .date{
+    color: #707070;
+    font-size: 0.9em;
+  }
+  .category-pill{
+    color: #5E6282;
+    background-color: #74747433;
+    font-size: 0.8rem;
+    border-radius: 16px;
+    width: 28%;
+    height: 24px;
+    padding: 2px;
+    text-align: center;
+  }
+  ul{
+    list-style: none;
+    display: inline;
+  }
+  .card-body em{
+    color: #13BEFF;
+  }
+
+}
+@media (max-width:768px) {
+  .card-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-container .card{
+    width: 70% !important;
+  }
+}
